@@ -1415,6 +1415,10 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
+.mobile-menu-wrapper.is-open {
+    transform:translateX(0);
+}
+
 @media screen and (min-width: 768px) {
     .mobile-menu-wrapper {
         display: none;
@@ -1484,14 +1488,17 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         letter-spacing: 0.02em;
         text-transform: capitalize;
         color: #2E2F42;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
-    }
+        
+        .mobile-menu-link:hover,
+        .mobile-menu-link:focus {
+            color: #404bbf;
+        }
+        }
+    
 
-@media screen and (max-width: 767px) {
-    .color-studio {
-        color: #404BBF;
-    }
-}
+
 
 @media screen and (max-width: 767px) {
     .mobile-address-list {
@@ -1520,21 +1527,21 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     line-height: 1.2;
     letter-spacing: 0.02em;
     gap: 40px;
-}
-}
-
-@media screen and (max-width: 767px) {
-    .color-mob {
-        color: #4D5AE5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .menu-mob-link:hover,
+    .menu-mob-link:focus {
+        color: #404bbf;
     }
 }
 
+
+
+
 @media screen and (max-width: 767px) {
     .mobile-social-container {
-        align-content: center;
-        justify-content: center;
-        gap: 16px;
-        margin-right: 24px;
+         margin:0 24px 0 16px;
     }
 }
 
@@ -1542,7 +1549,7 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 @media screen and (max-width: 767px) {
    .mob-social-list {
         display: flex;
-        gap: 24px;
+        gap: 40px;
         justify-content: center;
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
