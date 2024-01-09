@@ -181,6 +181,7 @@ span {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
+    color: #2e2f42;
 }
 
 .menu-nav:hover,
@@ -284,7 +285,6 @@ span {
 
 
 .hero {
-    display: flex;
     background-size: cover;
     margin: 0 auto;
     background-color: #2E2F42;
@@ -618,7 +618,6 @@ span {
 .container-team-title-text {
     max-width:264px;
     background-color: #FFF;
-    margin-bottom: 72px;
     padding: 32px 0;
     border: 1px solid #e7e9fc;
 
@@ -640,7 +639,7 @@ span {
         display: flex;
         column-gap: 24px;
         flex-wrap: wrap;
-        row-gap: 48px;
+        row-gap: 64px;
         }
     }
     
@@ -664,15 +663,17 @@ span {
     max-width: 264px;
     margin: 0 auto;
     background-color: #fff;
+    margin-bottom: 72px;
  }
 
  @media screen and (min-width: 768px) {
-     .team-list-item {
+    .team-list-item {
          width: 584px;
-         margin: 0 auto 64px;
-        flex-basis: calc((100% - 24px) / 2);
+         margin-bottom: 0;
+         flex-basis: calc((100% - 24px) / 2);
      }
  }
+
 @media screen and (min-width: 1158px) {
     .team-list-item   {
        flex-basis:  calc((100% - 72px) / 4);
@@ -687,7 +688,7 @@ span {
     margin: 0 auto;
       }
 
-      @media screen and (min-width: 768px) {
+ @media screen and (min-width: 768px) {
         .img-team {
             margin: 0;
       }
@@ -941,7 +942,9 @@ span {
 
   .container-footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 72px;
+    text-align: center;
   }
 
  @media screen and (min-width: 768px) {
@@ -950,7 +953,9 @@ span {
         flex-wrap: wrap;
         text-align: left;
         gap: 72px 24px;
-        }
+        display: flex;
+       flex-direction: row;
+           }
     }
 
 
@@ -995,9 +1000,7 @@ span {
 .container-footer-social {
     box-sizing: border-box;
     margin: 0 auto;
-    width: 208px;
-    height: 80px;
-  }
+ }
 
 .soc-media-text {
     font-family: Roboto, sans-serif;
@@ -1005,14 +1008,23 @@ span {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: center;
     color: #FFF;
     margin-bottom: 16px;
    }
 
+   @media screen and  (min-width: 768px) {
+.soc-media-text {
+    text-align: left;
+   }
+       }
+
+       
 .footer-social-list {
     display: flex;
     align-items: center;
     gap: 16px;
+    text-align: center;
 }
 
 .footer-social-item {
@@ -1050,8 +1062,11 @@ span {
     flex-shrink: 0;     
     margin-left: auto;
     margin-right: auto;
-    @media screen and (min-width:1158px) {
-        width: auto;
+}
+   
+@media screen and (min-width:1158px) {
+    .container-form {
+         width: auto;
     }
 }
 
@@ -1060,9 +1075,11 @@ span {
 .feedback-form {
     text-align:  center;
     border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    @media screen and (min-width: 1158px) {
-        width: auto;
+  }
+    
+@media screen and (min-width: 1158px) {
+    .feedback-form {
+          width: auto;
 }
 }
 
@@ -1112,8 +1129,14 @@ span {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
+    margin: 0 auto;
+    margin-top: 16px;
+}
+    
+    
     @media only screen and (min-width: 768px) {
-       margin: 0;
+    .form-btn {
+        margin: 0;
         }
     }
 
@@ -1452,12 +1475,6 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         border: 1px solid rgba(0, 0, 0, 0.1);
         cursor: pointer;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .mobile-menu-navigation {
-        margin-bottom: auto;
     }
 }
 
