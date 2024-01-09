@@ -150,13 +150,6 @@ body {
     text-transform: uppercase;
  }
 
-/*--------------FOOTER----------
-.logo-footer {
-    display: inline-block;
-    align-items: center;
-    margin-bottom: 18px;
-}
-*/
 
 span {
     color: #2e2f42;
@@ -303,7 +296,8 @@ span {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)), url(../images/hero/hero-bg_mob1.jpg);
 }
-    
+
+
 @media screen and (min-width: 768px)  {
     .hero {
         max-width: 768px;
@@ -311,6 +305,7 @@ span {
                     rgba(46, 47, 66, 0.7)), url(../images/hero/Dark-bg-tabl1.jpg);
     }
 }
+
     
 @media screen and (min-width: 1158px) {
     .hero {
@@ -569,6 +564,7 @@ span {
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: left;
+    margin-top: 8px;
  
 }
 
@@ -622,16 +618,12 @@ span {
 .container-team-title-text {
     max-width:264px;
     background-color: #FFF;
-    margin: 0 auto;
+    margin-bottom: 72px;
     padding: 32px 0;
     border: 1px solid #e7e9fc;
 
     display: block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   
-    }
+       }
 
 @media  screen and (min-width: 768px) {
     .container-team-title-text {
@@ -669,8 +661,9 @@ span {
     0px 2px 1px 
     rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
-    max-width: 100%;
-    margin-bottom: 72px;
+    max-width: 264px;
+    margin: 0 auto;
+    background-color: #fff;
  }
 
  @media screen and (min-width: 768px) {
@@ -884,7 +877,6 @@ span {
 
 @media screen and (min-width: 768px) {
 .portfolio-list {
-        width: 736px;
         display: flex;
         column-gap: 24px;
         flex-wrap: wrap;
@@ -942,9 +934,6 @@ span {
 }
 
 .footer-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #2e2f42;
     padding-top: 96px;
     padding-bottom: 96px;
@@ -952,32 +941,40 @@ span {
 
   .container-footer {
     display: flex;
-    flex-direction: column;
-    align-items:center;
-    gap: 72px;
-    align-items: baseline;
-    text-align: center;
-     @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+
+ @media screen and (min-width: 768px) {
+    .container-footer {
         max-width: 584px;
-        flex-direction: row;
         flex-wrap: wrap;
         text-align: left;
-        column-gap: 24px ;
+        gap: 72px 24px;
         }
-        @media screen and (min-width: 1158px) {
+    }
+
+
+@media screen and (min-width: 1158px) {
+    .container-footer {
             max-width: 1158px;
-            
-        }
+            flex-wrap: nowrap;
+     }
   }
 
   @media screen and (min-width: 768px) {
    .feedback-form {
     display:flex;
-    
+    gap:24px;    
    }
   }
     
-  
+  /*--------------FOOTER----------*/
+  .logo-footer {
+      display: inline-block;
+      align-items: center;
+      margin-bottom: 18px;
+      text-decoration: none;
+  }
 
   .span-studio {
     color: #f4f4fd;
@@ -997,7 +994,7 @@ span {
 
 .container-footer-social {
     box-sizing: border-box;
-    align-items: center;
+    margin: 0 auto;
     width: 208px;
     height: 80px;
   }
@@ -1062,11 +1059,7 @@ span {
 
 .feedback-form {
     text-align:  center;
-    width: 264px;
-    height: 40px;
-    gap: 24px;
     border-radius: 4px;
-    border: 1px solid #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     @media screen and (min-width: 1158px) {
         width: auto;
@@ -1085,18 +1078,17 @@ span {
 }
 
 .email-form-input {   
-    padding: 0 16px, 16px, 16px;
     border-radius: 4px;
     border: 1px solid #ffffff;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     background-color: transparent;
     color: #ffffff;
-    width: 264px;
-    height: 40px;
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-}
+    width: 288px;
+    height: 40px;
+  }
 
 .email-form-input::placeholder {
     color: #ffffff;
@@ -1120,7 +1112,6 @@ span {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    margin: 16px auto 0;
     @media only screen and (min-width: 768px) {
        margin: 0;
         }
@@ -1185,25 +1176,23 @@ span {
     
 
 .modal-close-btn {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e7e9fc;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    padding: 0;
-    stroke:#2e2f42;
-    fill: #ffffff;
-    line-height: 0;
-    transition: background-color 250ms 
-    cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
@@ -1436,12 +1425,12 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 @media screen and (max-width: 767px) {
     .mobile-menu-container {
-        display: block;
+        display: flex;
         margin-left: 0;
         margin-right: 0;
+        flex-direction: column;
     }
 }
-
 
 
 @media screen and (max-width: 767px) {
@@ -1468,9 +1457,16 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 @media screen and (max-width: 767px) {
     .mobile-menu-navigation {
-        margin-bottom: 168px;
+        margin-bottom: auto;
     }
 }
+
+@media screen and (max-width: 767px) {
+.mobile-menu {
+    margin-bottom: 168px;
+}
+}
+
 
 @media screen and (max-width: 767px) {
     .mobile-menu-item {
@@ -1498,7 +1494,11 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
     
 
-
+@media screen and (max-width: 767px) {
+    .color-studio {
+        color: #404BBF;
+    }
+}
 
 @media screen and (max-width: 767px) {
     .mobile-address-list {
@@ -1536,6 +1536,11 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
+@media screen and (max-width: 767px) {
+    .color-tel {
+        color: #4D5AE5;
+    }
+}
 
 
 
@@ -1575,6 +1580,10 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     column-gap: 40px;
 }
 
+.link-social:hover,
+.link-social:focus {
+    background-color: #31d0aa;
+}
 .footer-hover {
     background-color: #4d5ae5;
 }
@@ -1586,3 +1595,28 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px),
+screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/hero-bg-mob@2x.jpg);
+    }
+}
+
+
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-tabl-2@.jpg);
+    }
+}
+
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1158px),
+screen and (min-resolution: 2dppx) and (min-width: 1158px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/people-office_dt@2x.jpg);
+    }
+}
