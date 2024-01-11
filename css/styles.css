@@ -633,17 +633,18 @@ span {
     border: 1px solid #e7e9fc;
 
     display: block;
-       }
+}
 
 @media  screen and (min-width: 768px) {
     .container-team-title-text {
         margin: 0 ;
     }
+}
 
 .team-list {
    gap: 72px;
 }
-}
+
 
 @media screen and (min-width: 768px) {
     .team-list {
